@@ -1,0 +1,8 @@
+// Media-query breaipoint to use with breakpoints mixin
+// Mixin can be found in _mixins.scss
+$breakpoints: (
+  '1' : 576px,
+  '2'  : 768px,
+  '3'  : 992px,
+  '4'  : 1200px,
+);

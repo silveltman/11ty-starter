@@ -1,0 +1,8 @@
+# Ignore eleventy output
+_site/
+
+# Ignore installed npm modules
+node_modules/
+
+# Ignore generated package-lock
+package-lock.json
