@@ -3,24 +3,22 @@
 @import 'abstracts/mixins';
 @import 'abstracts/placeholders';
 
-// @import 'vendors/bootstrap';
+// @import 'vendors/snipcart';
 
 @import 'base/sanitize';
+@import 'base/base';
 @import 'base/typography';
 
-@import 'layout/navigation';
+@import 'layout/nav';
 @import 'layout/footer';
-@import 'layout/forms';
-@import 'layout/hero';
-@import 'layout/wrapper';
 
 @import 'components/buttons';
-@import 'components/dropdown';
+@import 'components/cards';
+@import 'components/media';
 
 @import 'pages/home';
 @import 'pages/contact';
 
-@import 'themes/theme';
-@import 'themes/admin';
+// @import 'themes/my-theme';
 
 @import 'shame';

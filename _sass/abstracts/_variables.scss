@@ -1,8 +1,20 @@
+$bg-1: yourValue;
+$bg-2: yourValue;
+$color-1: yourValue;
+$color-2: yourValue;
+$brandColor: yourValue;
+
+$font-1: yourValue;
+$font-2: yourValue;
+
+// For easily setting a margin betwwen sections
+$margin: clamp(70px, 18vw, 150px) auto;
+
 // Media-query breaipoint to use with breakpoints mixin
 // Mixin can be found in _mixins.scss
 $breakpoints: (
-  '1' : 576px,
-  '2'  : 768px,
-  '3'  : 992px,
-  '4'  : 1200px,
+  1 : 576px,
+  2 : 768px,
+  3 : 992px,
+  4 : 1200px,
 );
