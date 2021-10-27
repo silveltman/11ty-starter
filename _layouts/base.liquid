@@ -4,15 +4,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta charset="utf-8">
     <link rel="stylesheet" href="./assets/main.css">
-    <script src="/assets/js/main.js" defer></script>
+    
     <meta name="format-detection" content="telephone=no">
+
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="/assets/js/main.js"></script>
 
     <!-- <script src="https://kit.fontawesome.com/e54a9cf40b.js" crossorigin="anonymous"></script> -->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"> -->
 
-    <!-- <meta property="og:title" content=" " /> -->
-    <!-- <meta property="og:description" content=" " /> -->
-    <!-- <meta property="og:image" content=" " /> -->
+    <meta property="og:title" content="{{ info.title }}">
+    <meta property="og:site_name" content="{{ info.company_name }}">
+    <meta property="og:url" content="{{ info.url }}">
+    <meta property="og:description" content="{{ info.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ info.logo.image }}">
+    <meta property="og:locale" content="nl" />
+
+
+    <title>{{ title | default: info.title }}</title>
+    <meta name="description" content="{{ description | default: info.description }}" />
+    
   </head>
   <body>
 

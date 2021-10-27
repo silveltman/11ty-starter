@@ -1,18 +1,16 @@
 {
-  "name": "eleventy-sass",
+  "name": "11ty-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "A starter template for 11ty",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-img": "^1.0.0"
   },
   "dependencies": {
     "eleventy-plugin-sass": "^1.2.0"

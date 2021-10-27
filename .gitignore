@@ -5,4 +5,8 @@ _site/
 node_modules/
 
 # Ignore generated package-lock
-package-lock.json
+# (commented this line as suggested when using cloudcannon)
+# package-lock.json
+
+# Ignore environment variables
+.env

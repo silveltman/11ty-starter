@@ -1,7 +1,7 @@
 html, body {
-  font-family: $font-1;
-  background: $bg-1;
-  color: $color-2;
+  font-family: $font-family-base;
+  background: $bg-base;
+  color: $font-color-base;
   font-size: 17px;
   scroll-behavior: smooth;
 }
@@ -10,9 +10,13 @@ main {
   position: relative;
 }
 
+button {
+  font-family: $font-family-base;
+  font-size: 17px;
+}
+
 // cloudcannon editor links 
 // docs: https://cloudcannon.com/documentation/edit/editing/html/#toggling-visibility
-
 .editor-link {
   display: none;
   position: fixed;

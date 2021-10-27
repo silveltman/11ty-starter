@@ -1,13 +1,15 @@
-$bg-1: yourValue;
-$bg-2: yourValue;
-$color-1: yourValue;
-$color-2: yourValue;
-$brandColor: yourValue;
+$bg-base: #FFFF;
+$bg-light: #FFFF;
+$bg-dark: #FFFF;
 
-$font-1: yourValue;
-$font-2: yourValue;
+$font-family-base: 'calibri';
+$font-family-heading: 'calibri';
+$font-family-display: 'calibri';
 
-// For easily setting a margin betwwen sections
+$font-color-base: #000;
+$font-color-light: #000;
+$font-color-dark: #000;
+
 $margin: clamp(70px, 18vw, 150px) auto;
 
 // Media-query breaipoint to use with breakpoints mixin

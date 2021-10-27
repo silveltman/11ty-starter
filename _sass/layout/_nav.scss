@@ -1,0 +1,145 @@
+$border: 1px solid rgba(#000, .08);
+$color: $font-color-base;
+$bg: $bg-light;
+
+.header {
+  position: fixed;
+  z-index: 9;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  @include media(3) {
+    bottom: auto;
+    top: 0;
+    height: 62px;
+    background: $bg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: $border;
+  }
+
+  &__logo {
+    display: none;
+
+    @include media(3) {
+      display: block;
+      width: 240px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+
+  &__links{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-top: $border;
+    background: $bg;
+
+    @include media(3) {
+      display: block !important; // has to have !important to prevent alpine.js from hiding it
+      border: 0;
+      flex-direction: row;
+    }
+  }
+
+  &__link {
+    padding: .8em 2em;
+    text-decoration: none;
+    color: $color;
+
+    @include media(3) {
+      padding: .4em clamp(1.25em, 2vw, 1.7em);
+    }
+
+    &--last { 
+      font-size: 17px;
+      outline: 2px solid red;
+      color: red;
+      margin: .8em;
+      padding: .4em 1em;
+
+      @include media(3) {
+        margin: .4em 0 .4em 1.25em;
+      }
+    }
+  }
+
+  &__toolbar {
+    height: 56px;
+    display: flex;
+    background: $bg;
+    border-top: $border;
+
+    // account for ios bar
+    box-sizing: content-box;
+    padding-bottom: env(safe-area-inset-bottom);
+
+    @include media(3) {
+      display: none;
+    }
+  }
+
+  &__toolbar-link,
+  &__toolbar-btn {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: $color;
+    padding: 7px 0 0;
+  }
+
+  &__toolbar-link {
+    text-decoration: none;
+  }
+
+  &__toolbar-btn {
+    background: none;
+    cursor: pointer;
+    border: 0;
+  }
+}
+
+// Styles for animating the burger icon in the bottom nav bar
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20px;
+  width: 20px;
+  transition: transform .2s ease;
+
+  &__line {
+    height: .15em;
+    background: $color;
+    border-radius: 5px;
+    transform-origin: 0 0;
+    transition: width .2s ease;
+    width: 20px;
+  }
+
+  &.open {
+    transform: rotate(30deg);
+
+    .burger__line {  
+      &:nth-child(1) {
+        width: 10px;
+      }
+      &:nth-child(3) {
+        width: 15px;
+      }
+    }
+  }
+}

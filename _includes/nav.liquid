@@ -1,3 +1,37 @@
-{% for item in nav %}
-  <a href="{{item.url}}" class="nav__link">{{item.name}}</a>
-{% endfor %}
+<header class="header">
+  <a class="header__logo" href="/">
+    <img src="{{ info.logo.image }}" alt="{{ info.logo.alt }}">
+  </a>
+
+  <nav class="nav" x-data="{ open: false }">
+    <div class="nav__links" x-show="open" @click.outside="open = false" x-transition>
+      {% for item in nav %}
+        <a href="{{item.url}}" class="nav__link {% if forloop.last %} nav__link--last {% endif %}">{{item.name}}</a>
+      {% endfor %}
+    </div>
+
+    <div class="nav__toolbar">
+      <a href="#" class="nav__toolbar-link">
+        <i class="material-icons">category</i>
+        linkA
+      </a>
+      <a href="#" class="nav__toolbar-link">
+        <i class="material-icons">category</i>
+        linkB
+      </a>
+      <a href="#" class="nav__toolbar-link">
+        <i class="material-icons">category</i>
+        linkC
+      </a>
+      <button class="nav__toolbar-btn" @click="open = ! open">
+        <span class="burger" :class="open ? 'open' : ''">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </span>
+        Menu
+      </button>
+    </div>
+    
+  </nav>
+</header>
