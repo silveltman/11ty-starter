@@ -1,5 +1,6 @@
 const pluginSass = require("eleventy-plugin-sass");
 const Image = require("@11ty/eleventy-img");
+const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 // Function for eleventy-img plugin (docs: https://www.11ty.dev/docs/plugins/image/)
 // Can be used in Liquid with: {% image "[path]", "[lass]", "[alt]", "[sizes]",  %}
@@ -32,6 +33,12 @@ module.exports = function(eleventyConfig) {
     input: ['./_sass/**/*.{scss,sass}', '!node_modules/**'],
     outputDir: "assets",
     remap: true
+  });
+
+  eleventyConfig.addPlugin(sitemap, {
+    sitemap: {
+      hostname: "https://example.com",
+    },
   });
 
   eleventyConfig.addPassthroughCopy("assets");
