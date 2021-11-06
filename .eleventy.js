@@ -3,10 +3,13 @@ const Image = require("@11ty/eleventy-img");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 // Function for eleventy-img plugin (docs: https://www.11ty.dev/docs/plugins/image/)
-// Can be used in Liquid with: {% image "[path]", "[lass]", "[alt]", "[sizes]",  %}
-async function imageShortcode(src, className, alt, sizes) {
+// Can be used in Liquid with: {% image "[path]", "[class]", "[alt]", "[sizes]", "[widths]" %
+// Example: {% image "./assets/img/myImg.jpg", "myClass", "A description", "(max-width: 768px) 90vw, 300px", "300, 600, 900" %}
+
+async function imageShortcode(src, className, alt, sizes, widths) {
+  let widthsArray = widths.split(',').map(Number);
   let metadata = await Image(src, {
-    widths: [300, 600],
+    widths: widthsArray,
     formats: ["webp", "jpeg", "svg"],
     // url_path: "./assets/img/",
     outputDir: "./_site/img/",
