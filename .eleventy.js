@@ -11,7 +11,7 @@ async function imageShortcode(src, className, alt, sizes, widths) {
   let metadata = await Image(src, {
     widths: widthsArray,
     formats: ["webp", "jpeg", "svg"],
-    // url_path: "./assets/img/",
+    url_path: ".",    // WARNING: Usage with this url_path setting has not been tested yet
     outputDir: "./_site/img/",
     svgShortCircuit: true,
   });
