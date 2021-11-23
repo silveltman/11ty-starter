@@ -8,7 +8,8 @@ const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 async function imageShortcode(src, className, alt, sizes, widths) {
   let widthsArray = widths.split(',').map(Number);
-  let metadata = await Image(src, {
+  // Put . infront of src so we don't have to do it manually for every image + compatability with CMS's
+  let metadata = await Image(`.${src}`, {
     widths: widthsArray,
     formats: ["webp", "jpeg", "svg"],
     url_path: ".",    // WARNING: Usage with this url_path setting has not been tested yet
