@@ -22,8 +22,8 @@
     <meta property="og:locale" content="nl" />
 
 
-    <title>{{ title | default: info.title }}</title>
-    <meta name="description" content="{{ description | default: info.description }}" />
+    <title>{{ page_title | default: info.title }}</title>
+    <meta name="description" content="{{ page_description | default: info.description }}" />
     
   </head>
   <body>
