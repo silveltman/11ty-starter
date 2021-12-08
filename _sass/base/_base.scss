@@ -1,9 +1,12 @@
 html, body {
-  font-family: $font-family-base;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-primary;
   background: $bg-base;
   color: $font-color-base;
-  font-size: 17px;
-  scroll-behavior: smooth;
+  font-size: var(--font-size-400);
 }
 
 main {
@@ -11,7 +14,7 @@ main {
 }
 
 button {
-  font-family: $font-family-base;
+  font-family: $font-family-primary;
   font-size: 17px;
 }
 

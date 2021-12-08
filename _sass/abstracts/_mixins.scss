@@ -19,3 +19,21 @@
         + "Please make sure it is defined in `$breakpoints` map.";
   }
 }
+
+@mixin pseudo($loc: before, $pos: absolute, $display: block, $content: '') {
+  position: relative;
+
+  &::#{$loc} {
+    position: $pos;
+    display: $display;
+    content: $content;
+    @content;
+  }
+}
+
+@mixin position ($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

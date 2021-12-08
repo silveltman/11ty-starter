@@ -1,16 +1,13 @@
-$bg-base: #FFFF;
 $bg-light: #FFFF;
-$bg-dark: #FFFF;
+$bg-base: #ebebeb;
+$bg-dark: #bbbbbb;
 
-$font-family-base: 'calibri';
-$font-family-heading: 'calibri';
-$font-family-display: 'calibri';
+$color-primary: blue;
+$color-secondary: pink;
 
-$font-color-base: #000;
-$font-color-light: #000;
-$font-color-dark: #000;
-
-$margin: clamp(70px, 18vw, 150px) auto;
+$color-success: green;
+$color-error: red;
+$color-warning: yellow;
 
 // Media-query breaipoint to use with breakpoints mixin
 // Mixin can be found in _mixins.scss
