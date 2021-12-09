@@ -1,10 +1,15 @@
-// Mixin to sumplify setting a mediaquery in stylesheets.
-// Can be set with @include media($breakpoint)
-// Breakpoints are set in a sass map in  _variables.scss
+/* For mediaqueries. Can be set with @include media($breakpoint) */
 @mixin media($breakpoint) {
+
+  $breakpoints: (
+  1 : 576px,
+  2 : 768px,
+  3 : 992px,
+  4 : 1200px,
+);
+
   // Retrieves the value from the key
   $value: map-get($breakpoints, $breakpoint);
-
   // If the key exists in the map
   @if $value != null {
     // Prints a media query based on the value
@@ -12,7 +17,6 @@
       @content;
     }
   }
-
   // If the key doesn't exist in the map
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
@@ -20,6 +24,7 @@
   }
 }
 
+/* Pseudo elements */
 @mixin pseudo($loc: before, $pos: absolute, $display: block, $content: '') {
   position: relative;
 
@@ -31,6 +36,7 @@
   }
 }
 
+/* Shortcut for top, right, bottom, left on absolute elements */
 @mixin position ($top: 0, $right: 0, $bottom: 0, $left: 0) {
   top: $top;
   right: $right;

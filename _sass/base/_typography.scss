@@ -2,10 +2,6 @@ $font-family-primary: sans-serif;
 $font-family-secondary: serif;
 $font-family-tertiary: monospace;
 
-$font-color-light: $color-text-light;
-$font-color-base: $color-text-base;
-$font-color-dark: $color-text-dark;
-
 $font-lineheight-base: 1.6;
 $font-lineheight-heading: 1.1;
 
@@ -40,7 +36,7 @@ $font-weight-heading: 700;
 
 h1, h2, h3, h4 {
   font-family: $font-family-secondary;
-  color: $font-color-dark;
+  color: $color-text-dark;
   font-size: var(--font-size-700);
   line-height: $font-lineheight-heading;
   font-weight: $font-weight-heading;
