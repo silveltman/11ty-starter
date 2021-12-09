@@ -2,11 +2,12 @@
 @mixin media($breakpoint) {
 
   $breakpoints: (
-  1 : 576px,
-  2 : 768px,
-  3 : 992px,
-  4 : 1200px,
-);
+    1 : 512px,
+    2 : 768px,
+    3 : 1024px,
+    4 : 1280px,
+    5 : 1440px,
+  );
 
   // Retrieves the value from the key
   $value: map-get($breakpoints, $breakpoint);
