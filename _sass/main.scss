@@ -6,14 +6,16 @@
 // @import 'vendors/snipcart';
 
 @import 'base/sanitize';
-@import 'base/typography';
 @import 'base/colors';
+@import 'base/spacing';
+@import 'base/typography';
 @import 'base/base';
 
 @import 'layout/nav';
 @import 'layout/footer';
 
-// @import 'components/buttons';
+@import 'components/buttons';
+@import 'components/icons';
 // @import 'components/cards';
 // @import 'components/media';
 

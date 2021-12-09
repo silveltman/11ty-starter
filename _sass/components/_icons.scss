@@ -1,0 +1,15 @@
+:root {
+  --icon-size-300: 16px;
+  --icon-size-400: 24px;
+  --icon-size-500: 32px;
+  --icon-size-600: 48px;
+  --icon-size-700: 64px;
+}
+
+.icon {
+  display: inline-block;
+  color: inherit;
+  height: 1em;
+  width: 1em;
+  line-height: 1;
+}

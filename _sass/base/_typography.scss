@@ -2,9 +2,9 @@ $font-family-primary: sans-serif;
 $font-family-secondary: serif;
 $font-family-tertiary: monospace;
 
-$font-color-light: #666;
-$font-color-base: #333;
-$font-color-dark: #000;
+$font-color-light: $color-text-light;
+$font-color-base: $color-text-base;
+$font-color-dark: $color-text-dark;
 
 $font-lineheight-base: 1.6;
 $font-lineheight-heading: 1.1;
@@ -24,11 +24,13 @@ $font-weight-heading: 700;
   }
 
   @include media(2) {
-      --font-size-base: 1.02em;
+    // 17px
+    --font-size-base: 1.0625em;
   }
 
   @include media(3) {
-      --font-size-base: 1.05em;
+    // 18px
+    --font-size-base: 1.125em; 
   }
 
   @include media(4) {
@@ -79,10 +81,10 @@ p {
   --font-size-600: calc(var(--font-size-base) * var(--font-size-multiplier) * var(--font-size-multiplier));
   --font-size-700: calc(var(--font-size-base) * var(--font-size-multiplier) * var(--font-size-multiplier) * var(--font-size-multiplier));
 
-  --font-space-200: calc(var(--font-space-300) - var(--font-space-steps) - var(--font-space-steps));
-  --font-space-300: calc(var(--font-space-400) - var(--font-space-steps));
+  --font-space-200: calc(var(--font-space-base) - var(--font-space-steps) - var(--font-space-steps));
+  --font-space-300: calc(var(--font-space-base) - var(--font-space-steps));
   --font-space-400: var(--font-space-base);
-  --font-space-500: calc(var(--font-space-400) + var(--font-space-steps));
-  --font-space-600: calc(var(--font-space-500) + var(--font-space-steps) + var(--font-space-steps));
-  --font-space-700: calc(var(--font-space-600) + var(--font-space-steps) + var(--font-space-steps) + var(--font-space-steps));
+  --font-space-500: calc(var(--font-space-base) + var(--font-space-steps));
+  --font-space-600: calc(var(--font-space-base) + var(--font-space-steps) + var(--font-space-steps));
+  --font-space-700: calc(var(--font-space-base) + var(--font-space-steps) + var(--font-space-steps) + var(--font-space-steps));
 }
