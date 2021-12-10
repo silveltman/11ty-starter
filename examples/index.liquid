@@ -1,0 +1,9 @@
+<div style="width: 90vw; margin: 130px auto">
+  <ul>
+    {% for item in collections.examples %}
+      <li>
+        <a href="{{ item.url }}">{{item.fileSlug}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
