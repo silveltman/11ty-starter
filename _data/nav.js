@@ -4,11 +4,11 @@ module.exports = [
     url: "/"
   },
   {
-    name: "Link B",
-    url: "#"
+    name: "Examples",
+    url: "/examples"
   },
   {
-    name: "Link C",
+    name: "My CTA",
     url: "#"
   }
 ];
