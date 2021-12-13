@@ -1,4 +1,4 @@
 module.exports = {
   tags: 'examples',
-  layout: 'examples'
+  layout: 'examples.liquid'
 };

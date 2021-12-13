@@ -1,4 +1,6 @@
 ---
+title: Carousel
+
 carousel:
   - image: https://picsum.photos/400/200?random=1
     alt: My image description
@@ -9,6 +11,8 @@ carousel:
   - image: https://picsum.photos/400/200?random=4
     alt: My image description
   - image: https://picsum.photos/400/200?random=5
+    alt: My image description
+  - image: https://picsum.photos/400/200?random=6
     alt: My image description
 ---
 
@@ -40,20 +44,18 @@ carousel:
   @keydown.left="prev"
   @keydown.right="next"
 >
-  <div tabindex="0" class="carousel__container">
-    <button @click="prev" class="carousel__btn carousel__btn--prev "> ❮ </button>
+  <button @click="prev" class="carousel__btn carousel__btn--prev "> ❮ </button>
 
-    <ul x-ref="slider" class="carousel__list" tabindex="0">
-      {% for item in carousel %}
-        <li class="carousel__item">
-          <img class="carousel__img" src="{{ item.image }}" alt="{{ item.alt }}">
-
+  <ul x-ref="slider" class="carousel__list" tabindex="0">
+    {% for item in carousel %}
+      <li class="carousel__item">
+        <!-- Replace with custom content from here... -->
+          <img src="{{ item.image }}" alt="{{ item.alt }}">
           <button x-bind="focusableWhenVisible" class="btn">Button</button>
-        </li>
-      {% endfor %}
-    </ul>
+        <!-- till here -->
+      </li>
+    {% endfor %}
+  </ul>
 
-    <button @click="next" class="carousel__btn carousel__btn--next"> ❯ </button>
-
-  </div>
+  <button @click="next" class="carousel__btn carousel__btn--next"> ❯ </button>
 </div>

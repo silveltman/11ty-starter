@@ -13,17 +13,21 @@
 @import 'base/typography';
 @import 'base/base';
 
-@import 'layout/nav';
-@import 'layout/footer';
-@import 'layout/forms';
-@import 'layout/accordion';
-@import 'layout/carousel';
-
 @import 'components/icons';
 @import 'components/buttons';
 @import 'components/inputs';
 // @import 'components/cards';
 // @import 'components/media';
+
+@import 'layout/forms';
+@import 'layout/accordion';
+@import 'layout/carousel';
+
+@import 'includes/nav';
+@import 'includes/nav-bottom';
+@import 'includes/footer';
+
+
 
 // @import 'pages/index';
 

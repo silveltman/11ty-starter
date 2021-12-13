@@ -17,3 +17,6 @@ button {
   font-family: $font-family-primary;
   font-size: var(--font-size-base);
 }
+
+// For Alpine: https://alpinejs.dev/directives/cloak
+[x-cloak] { display: none !important; }
