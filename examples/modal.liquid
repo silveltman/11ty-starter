@@ -1,0 +1,33 @@
+---
+title: Modal
+---
+
+<div x-data="{ open: false }">
+  <!-- Button -->
+  <button @click="open = true" type="button">
+  Open modal
+  </button>
+  
+  <!-- Modal -->
+  <template x-teleport="body">
+    <div x-show="open" @keydown.escape.prevent.stop="open = false" class="modal">
+    
+      <!-- Overlay -->
+      <div x-show="open" x-transition.opacity class="modal__overlay"></div>
+      
+      <!-- Content -->
+      <div
+        x-show="open" 
+        x-transition
+        @click="open = false"
+        x-trap.noscroll.inert="open"
+        class="modal__content"
+        >
+        CONTENT
+        <!-- Place content here. Remove @click from parent div, or add @click.stop to child div-->
+      </div>
+    </div>
+  </template>
+</div>
+  
+  

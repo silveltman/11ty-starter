@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
 
@@ -19,4 +20,6 @@ button {
 }
 
 // For Alpine: https://alpinejs.dev/directives/cloak
-[x-cloak] { display: none !important; }
+[x-cloak] {
+  display: none !important;
+}

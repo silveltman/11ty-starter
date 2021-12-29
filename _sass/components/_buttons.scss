@@ -33,6 +33,7 @@ $btn-secondary-border: 1px solid $color-primary;
   line-height: 1;
   border: none;
   cursor: pointer;
+  background: 0;
 
   font-size: var(--btn-font-size);
   color: $btn-base-color;
@@ -83,7 +84,7 @@ $btn-secondary-border: 1px solid $color-primary;
   
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: calc(-1 * $space);
+  margin-bottom: calc(-1 * var(--space-200));
 
   > * {
     margin-right: $space;
