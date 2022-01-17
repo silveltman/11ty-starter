@@ -1,0 +1,8 @@
+[component]
+structures = []
+label = "nav-base"
+description = ""
+icon = ""
+tags = []
+
+[props]

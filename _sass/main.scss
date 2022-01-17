@@ -13,13 +13,13 @@
 @import 'base/typography';
 @import 'base/base';
 
-@import '../component-library/main';
-
 @import 'components/icons';
 @import 'components/buttons';
 @import 'components/inputs';
 // @import 'components/cards';
 // @import 'components/media';
+
+@import '../component-library/main';
 
 @import 'layout/forms';
 @import 'layout/accordion';
@@ -28,8 +28,7 @@
 @import 'layout/modal';
 @import 'layout/gallery';
 
-@import 'includes/nav';
-@import 'includes/nav-bottom';
+// @import 'includes/nav-bottom';
 @import 'includes/footer';
 
 // @import 'pages/index';

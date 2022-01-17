@@ -9,28 +9,12 @@ $icon-size-700: 64px;
 .icon {
   display: inline-block;
   color: inherit;
-  height: $icon-size-400;
-  width: $icon-size-400;
   line-height: 1;
-}
+  font-size: $icon-size-400 !important;
 
-.icon--chevron {
-  border-width: 0.16em 0.16em 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: transform 100ms;
 
-  @include pseudo('before') {
-    width: 52%;
-    height: 52%;
-    margin-top: -26.5%;
-    border: solid;
-    border-radius: 0 2px 0 0;
-    border-width: 2px 2px 0 0;
-    transform: rotate(135deg);
-  }
-
-  &.turn {
+  .rotate {
     transform: rotate(180deg);
   }
 }

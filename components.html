@@ -1,8 +1,9 @@
 ---
+eleventyExcludeFromCollections: true
 published: false
 permalink: /components/
 ---
-<main style="margin-bottom: 40px;">
+
 
 {% comment %}
     # NB: None of the tags on this page are required for a production build
@@ -30,8 +31,16 @@ permalink: /components/
 
 {% endif %}
 
-</main>
-
 <style>
-    .nav { display: none }
+.nav { 
+    display: none; 
+}
+
+.bookshop-browser-menus {
+    color: black;        
+}
+
+.bookshop-browser {
+    margin: 16px;        
+}
 </style>

@@ -22,7 +22,7 @@
     <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.js"></script>
 
     <!-- <script src="https://kit.fontawesome.com/e54a9cf40b.js" crossorigin="anonymous"></script> -->
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 
     <meta property="og:title" content="{{ info.title }}">
     <meta property="og:site_name" content="{{ info.company_name }}">
@@ -38,9 +38,12 @@
   </head>
   <body>
 
-    {% include nav %}
+    {% bookshop "nav/base" title: '' %}
 
-    <!-- {% include nav-bottom %} -->
+    {%- comment -%}
+    {% include nav %}
+    {%- endcomment -%}
+
     {{ content }}
     {% include footer %}
 

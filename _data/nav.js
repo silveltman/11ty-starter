@@ -1,28 +1,26 @@
 module.exports = [
   {
-    name: 'Home',
+    title: 'Home',
     url: '/'
   },
   {
-    name: 'Examples',
+    title: 'Examples',
     url: '',
     dropdown: {
       collection: 'examples',
-      custom: ''
     }
   },
   {
-    name: 'More',
+    title: 'More',
     url: '',
     dropdown: {
-      collection: '',
       custom: [
         {
-          name: 'Link A',
+          title: 'Link A',
           url: '/'
         },
         {
-          name: 'Link B',
+          title: 'Link B',
           url: '/'
         },
       ]
