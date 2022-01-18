@@ -31,39 +31,9 @@ module.exports = {
       output: true,
       _enabled_editors: ['visual']
     },
-    omgeving: {
-      path: '/aanbod/omgeving',
+    mycollection: {
+      path: '/mycollection',
       _icon: 'landscape',
-      output: true,
-      _enabled_editors: ['visual']
-    },
-    arrangementen: {
-      path: '/aanbod/arrangementen',
-      _icon: 'groups',
-      output: true,
-      _enabled_editors: ['visual']
-    },
-    activiteiten: {
-      path: '/aanbod/activiteiten',
-      _icon: 'directions_bike',
-      output: true,
-      _enabled_editors: ['visual']
-    },
-    overnachtingen: {
-      path: '/aanbod/overnachtingen',
-      _icon: 'hotel',
-      output: true,
-      _enabled_editors: ['visual']
-    },
-    routes: {
-      path: '/aanbod/routes',
-      _icon: 'map',
-      output: false,
-      _enabled_editors: ['data']
-    },
-    sloepen: {
-      path: '/sloepen',
-      _icon: 'directions_boat',
       output: true,
       _enabled_editors: ['visual']
     }
