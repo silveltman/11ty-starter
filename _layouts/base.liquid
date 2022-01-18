@@ -38,7 +38,9 @@
   </head>
   <body>
 
-    {% bookshop "nav/base" title: '' %}
+    {% bookshop "nav/base" items: nav.base %}
+    {% bookshop "nav/bottom" items: nav.bottom %}
+
 
     {%- comment -%}
     {% include nav %}

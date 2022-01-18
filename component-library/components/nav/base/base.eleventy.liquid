@@ -1,4 +1,4 @@
-<header class="nav" x-data="{ open: true }" :class="open && 'open'" @click.outside="open = false">
+<header class="nav" x-data="{ open: false }" :class="open && 'open'" @click.outside="open = false">
   <div class="nav__wrapper">
 
     <div class="nav__head">
@@ -17,7 +17,7 @@
 
     <div class="nav__content" :class="open && 'open'">
       <ul class="nav-list">
-        {% for item in nav %}
+        {% for item in items %}
   
         <!-- Links with dropdown -->
           {% if item.dropdown %} 

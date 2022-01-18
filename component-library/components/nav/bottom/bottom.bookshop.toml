@@ -6,3 +6,7 @@ icon = ""
 tags = []
 
 [props]
+[[props.items]]
+title = "Service"
+icon = "people"
+url = "/"

@@ -6,3 +6,20 @@ icon = ""
 tags = []
 
 [props]
+[[props.items]]
+title = 'Home'
+url = '/'
+
+[[props.items]]
+title = 'Examples'
+url = ''
+[dropdown]
+collection = 'examples'
+
+[[props.items]]
+title = 'More'
+url = ''
+[props.items.dropdown]
+[[props.items.dropdown.custom]]
+title = 'Link A'
+url = '/'

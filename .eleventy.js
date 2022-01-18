@@ -1,3 +1,4 @@
+const yaml = require("js-yaml");
 const pluginSass = require("eleventy-plugin-sass");
 const Image = require("@11ty/eleventy-img");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
@@ -97,6 +98,8 @@ module.exports = function(eleventyConfig) {
   ////---------------
 
   eleventyConfig.addPassthroughCopy("assets");
+
+  eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
 
   return {
     dir: {
