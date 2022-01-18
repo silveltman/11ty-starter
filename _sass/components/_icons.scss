@@ -7,14 +7,16 @@ $icon-size-600: 48px;
 $icon-size-700: 64px;
 
 .icon {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   color: inherit;
   line-height: 1;
   font-size: $icon-size-400 !important;
 
   transition: transform 100ms;
 
-  .rotate {
+  &.rotate {
     transform: rotate(180deg);
   }
 }
