@@ -1,21 +1,3 @@
----
-title: Carousel
-
-carousel:
-  - image: https://picsum.photos/400/200?random=1
-    alt: My image description
-  - image: https://picsum.photos/400/200?random=2
-    alt: My image description
-  - image: https://picsum.photos/400/200?random=3
-    alt: My image description
-  - image: https://picsum.photos/400/200?random=4
-    alt: My image description
-  - image: https://picsum.photos/400/200?random=5
-    alt: My image description
-  - image: https://picsum.photos/400/200?random=6
-    alt: My image description
----
-
 <div class="carousel"
   x-data="{
     skip: 1,
@@ -47,12 +29,11 @@ carousel:
   <button @click="prev" class="carousel__btn carousel__btn--prev "> ❮ </button>
 
   <ul x-ref="slider" class="carousel__list" tabindex="0">
-    {% for item in carousel %}
+
+    {% for item in list %}
       <li class="carousel__item">
-        <!-- Replace with custom content from here... -->
-          <img src="{{ item.image }}" alt="{{ item.alt }}">
-          <button x-bind="focusableWhenVisible" class="btn">Button</button>
-        <!-- till here -->
+        <!-- Content goes here -->
+        {{ item }}  
       </li>
     {% endfor %}
   </ul>

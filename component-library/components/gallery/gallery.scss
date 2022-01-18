@@ -4,25 +4,27 @@
   position: relative;
   display: grid;
   padding: 0;
+  max-height: calc(100vh - 100px);
 
   @include media(2) {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'a a b'
+      'a a c';
     padding: 0 $wrapper-padding;
   }
 
   &__img {
     position: relative;
+    min-height: 0;
     height: 100%;
     width: 100%;
     object-fit: cover;
     cursor: pointer;
-    transition: all 0.2s ease;
 
     &--1 {
-      @include media(2) {
-        grid-row: 1/3;
-      }
+      grid-area: a;
     }
 
     &--2,
@@ -31,16 +33,15 @@
 
       @include media(2) {
         display: block;
-        grid-column: 2;
       }
     }
 
     &--2 {
-      grid-row: 1;
+      grid-area: b;
     }
 
     &--3 {
-      grid-row: 2;
+      grid-area: c;
     }
   }
 
@@ -60,7 +61,7 @@
     color: $color-text-base;
 
     opacity: 0.5;
-    transition: all 0.1s ease;
+    transition: opacity 100ms ease;
 
     @include media(2) {
       left: calc(var(--space-200) + var(--wrapper-padding));
@@ -74,48 +75,71 @@
       margin-right: var(--space-100);
     }
   }
+
+  &__modal {
+    position: fixed;
+    @include inset;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background: $color-bg-dark;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.gallery-modal {
-  position: fixed;
-  @include inset;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
-  background: $color-bg-dark;
-  display: flex;
-  flex-direction: column;
+.gallery-toolbar {
+  background: $color-bg-base;
+  border-bottom: $border-base;
 
-  &__list,
-  &__single {
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    grid-gap: var(--space-100);
-
-    @include media(2) {
-      grid-gap: var(--space-200);
-      padding: var(--space-200);
-    }
+  &__content {
+    @extend %wrapper;
+    display: flex;
+    justify-content: space-between;
   }
 
-  &__list {
+  &__btn {
+    padding: var(--space-300) 0;
     display: grid;
-    justify-content: center;
-    overflow-y: scroll;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-gap: var(--space-200);
 
-    @include media(2) {
-      grid-template-columns: repeat(2, max(1fr));
-    }
-
-    @include media(3) {
-      grid-template-columns: repeat(2, max(480px));
+    &:last-child {
+      margin-left: auto;
     }
   }
+}
 
-  &__list-img {
+.gallery-list,
+.gallery-single {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  grid-gap: var(--space-100);
+
+  @include media(2) {
+    grid-gap: var(--space-200);
+    padding: var(--space-200);
+  }
+}
+
+.gallery-list {
+  display: grid;
+  justify-content: center;
+  overflow-y: scroll;
+
+  @include media(2) {
+    grid-template-columns: repeat(2, max(1fr));
+  }
+
+  @include media(3) {
+    grid-template-columns: repeat(2, max(480px));
+  }
+
+  &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -130,14 +154,14 @@
       }
     }
   }
+}
 
-  &__single {
-    min-height: 0;
-    display: flex;
-    justify-content: space-between;
-  }
+.gallery-single {
+  min-height: 0;
+  display: flex;
+  justify-content: space-between;
 
-  &__single-img {
+  &__img {
     min-width: 0;
     height: 100%;
     width: 100%;

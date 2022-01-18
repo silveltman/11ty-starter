@@ -1,0 +1,21 @@
+<form action="" class="form">
+  {% for item in fields %}
+    {% case item.type %}
+      {% when 'text' %}
+        <label class="label" for="{{ item.label }}">{{ item.label }}</label>
+        <input class="input" type="text" name="{{ item.label }}">
+      {% when 'textarea' %}
+        <label class="label" for="{{ item.label }}">{{ item.label }}</label>
+        <textarea class="textarea" name="{{ item.label }}"></textarea>
+      {% when 'select' %}
+      <label class="label" for="{{ item.label }}">{{ item.label }}</label>
+      <select class="select" name="{{ item.label }}">
+        {% for option in item.options %}
+          <option value="{{ option }}">{{ option }}</option>
+        {% endfor %}
+      </select>
+    {% endcase %}
+  {% endfor %}
+ 
+  <input class="btn btn--primary" type="submit" value="{{ submit }}">
+</form>

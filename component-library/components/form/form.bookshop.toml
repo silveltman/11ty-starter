@@ -1,0 +1,21 @@
+[component]
+structures = []
+label = "form"
+description = ""
+icon = ""
+tags = []
+
+[props]
+submit = "Verstuur"
+[[props.fields]]
+type = "text"
+label = "Name"
+
+[[props.fields]]
+type = "textarea"
+label = "Message"
+
+[[props.fields]]
+type = "select"
+label = "Choose"
+options = ["A", "B", "C"]
