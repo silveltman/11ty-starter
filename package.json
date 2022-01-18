@@ -19,6 +19,7 @@
   "dependencies": {
     "@bookshop/eleventy-bookshop": "^2.2.3",
     "@quasibit/eleventy-plugin-sitemap": "^2.1.4",
+    "eleventy-plugin-metagen": "^1.5.2",
     "eleventy-plugin-sass": "^1.2.0",
     "js-yaml": "^4.1.0"
   }

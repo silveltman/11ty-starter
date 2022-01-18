@@ -1,10 +1,24 @@
-name: Sloepverhuur Bolsward
-title: Sloepverhuur Bolsward
-description: Sloep huren met schipper t/m max. 12 personen of zelf een 8-persoons elektrische sloep varen o.a. langs de Friese Elfsteden.
+# Meta tag generator
+meta:
+  # title: title
+  # desc: description
+  url: https://mywebsite.nl
+  img: /assets/img/logo.svg
+  img_alt: Logo
+  name: John Doe
+  # twitter_card_type: summary_large_image
+  # twitter_handle: tannerdolby
+  # comments: true
+
+seo:
+  title: My title
+  description: My short description
+
 logo:
   image: /assets/img/logo.svg
-  alt: Logo Sloepverhuur Bolsward
-url: https://sloepverhuurbolsward.nl
-email: info@sloepverhuurbolsward.nl
-tel: +316-42520972
-adress: Werkmansbloei 16, 8701HA, Bolsward
+  alt: My logo
+
+contact:
+  email: info@sloepverhuurbolsward.nl
+  tel: +316-42520972
+  adress: Werkmansbloei 16, 8701HA, Bolsward

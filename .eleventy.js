@@ -3,6 +3,7 @@ const pluginSass = require("eleventy-plugin-sass");
 const Image = require("@11ty/eleventy-img");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const pluginBookshop = require("@bookshop/eleventy-bookshop");
+const metagen = require('eleventy-plugin-metagen');
 
 ////---------------
 //// FUNCTIONS
@@ -91,6 +92,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginBookshop({
 		bookshopLocations: ["component-library"]
 	}));
+
+  eleventyConfig.addPlugin(metagen);
 
 
   ////---------------

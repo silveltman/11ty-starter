@@ -24,16 +24,10 @@
     <!-- <script src="https://kit.fontawesome.com/e54a9cf40b.js" crossorigin="anonymous"></script> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 
-    <meta property="og:title" content="{{ info.title }}">
-    <meta property="og:site_name" content="{{ info.company_name }}">
-    <meta property="og:url" content="{{ info.url }}">
-    <meta property="og:description" content="{{ info.description }}">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ info.logo.image }}">
-    <meta property="og:locale" content="nl" />
-
-    <title>{{ page_title | default: info.title }}</title>
-    <meta name="description" content="{{ page_description | default: info.description }}" />
+    
+    <title>{{ seo.seo_title | default: info.seo.title }}</title>
+    <meta name="description" content="{{ seo.seo_description | default: info.seo.description }}" />
+    {% metagen info.meta %}
     
   </head>
   <body>
