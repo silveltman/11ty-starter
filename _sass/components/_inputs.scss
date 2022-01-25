@@ -9,10 +9,13 @@ $input-base-color: $color-text-base;
 $input-base-padding: var(--space-100) var(--space-200);
 $input-base-radius: $radius-small;
 $input-base-border: $border-base;
+$input-base-bg: $color-bg-light;
 
 $input-base-focus: $color-primary;
 
 $textarea-maxheight: 200px;
+
+$encodedcolor: encodecolor($input-base-color);
 
 /* Main */
 .label {
@@ -36,11 +39,23 @@ $textarea-maxheight: 200px;
   padding: $input-base-padding;
   border-radius: $input-base-radius;
   border: $input-base-border;
+  background: $input-base-bg;
 
   &:focus,
   &:active {
     outline: 0;
     box-shadow: inset 0px 0px 0px 1px $input-base-focus;
+  }
+}
+
+.select {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#{$encodedcolor}"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>');
+  background-size: $icon-size-400;
+  background-position: calc(100% - var(--space-200)) center;
+  background-repeat: no-repeat;
+
+  &:focus {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" transform="rotate(180)" fill="#{$encodedcolor}"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" /></svg>');
   }
 }
 
