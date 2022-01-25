@@ -49,15 +49,13 @@ x-data="{
 </button>
 
 <!-- Modal -->
-<template x-teleport="body">
+<template x-if="open">
   <div 
-  x-show="open" 
   @keydown.escape.prevent.stop="open = false" 
-  x-transition.opacity
   x-trap.noscroll.inert="open"
-  class="gallery__modal"
   @keydown.left="prev"
   @keydown.right="next"
+  class="gallery__modal"
   >
 
       <!-- Toolbar -->
@@ -77,7 +75,6 @@ x-data="{
       <!-- List of images -->
       <div
         x-show="!zoomed"
-        x-transition.opacity
         class="gallery-list"
         >
         {% for item in gallery %}
@@ -94,7 +91,6 @@ x-data="{
       <!-- Single image -->
       <div
       x-show="zoomed" 
-      x-transition.opacity
       class="gallery-single"
       >
         <button @click="prev" class="gallery-single__btn btn">
