@@ -8,7 +8,7 @@
     "build": "npx @11ty/eleventy",
     "bookshop": "bookshop-browser -b ./component-library -p 6061",
     "bookshop-init": "npx @bookshop/init --component",
-    "bookshop-live": "bookshop-live -b ./component-library -o site/assets/bookshop-live.js"
+    "bookshop-live": "npx bookshop-live -b ./component-library -o site/assets/bookshop-live.js"
   },
   "license": "ISC",
   "devDependencies": {
