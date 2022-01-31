@@ -15,7 +15,8 @@
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-img": "^1.0.0",
     "@bookshop/browser": "^2.2.3",
-    "@bookshop/eleventy-engine": "^2.2.3"
+    "@bookshop/eleventy-engine": "^2.2.3",
+    "@bookshop/live": "^2.4.0"
   },
   "dependencies": {
     "@bookshop/cloudcannon-eleventy-bookshop": "^2.4.0",
