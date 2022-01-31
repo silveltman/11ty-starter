@@ -7,7 +7,8 @@
     "dev": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
     "bookshop": "bookshop-browser -b ./component-library -p 6061",
-    "bookshop-init": "npx @bookshop/init --component"
+    "bookshop-init": "npx @bookshop/init --component",
+    "start": "bookshop-live -b ./component-library -o site/assets/bookshop-live.js"
   },
   "license": "ISC",
   "devDependencies": {
@@ -17,6 +18,7 @@
     "@bookshop/eleventy-engine": "^2.2.3"
   },
   "dependencies": {
+    "@bookshop/cloudcannon-eleventy-bookshop": "^2.4.0",
     "@bookshop/eleventy-bookshop": "^2.2.3",
     "@quasibit/eleventy-plugin-sitemap": "^2.1.4",
     "eleventy-plugin-metagen": "^1.5.2",

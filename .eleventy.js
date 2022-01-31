@@ -1,8 +1,9 @@
-const yaml = require("js-yaml");
+const pluginBookshop = require("@bookshop/eleventy-bookshop");
+const pluginCloudCannonBookshop = require("@bookshop/cloudcannon-eleventy-bookshop");
 const pluginSass = require("eleventy-plugin-sass");
+const yaml = require("js-yaml");
 const Image = require("@11ty/eleventy-img");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
-const pluginBookshop = require("@bookshop/eleventy-bookshop");
 const metagen = require('eleventy-plugin-metagen');
 
 ////---------------
@@ -92,6 +93,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginBookshop({
 		bookshopLocations: ["component-library"]
 	}));
+  eleventyConfig.addPlugin(pluginCloudCannonBookshop);
 
   eleventyConfig.addPlugin(metagen);
 

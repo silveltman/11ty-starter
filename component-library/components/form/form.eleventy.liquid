@@ -1,6 +1,9 @@
 <form action="" class="form">
   {% for item in fields %}
     {% case item.type %}
+      <label class="label" for="E-mail">E-mail</label>
+      <input class="input" type="email" name="E-mail">
+      
       {% when 'text' %}
         <label class="label" for="{{ item.label }}">{{ item.label }}</label>
         <input class="input" type="text" name="{{ item.label }}">
@@ -16,6 +19,10 @@
       </select>
     {% endcase %}
   {% endfor %}
+
+  <input type="hidden" name="_to" value="silveltman@hotmail.com" />
+  <input type="text" name="_subject" style="display: none;" value="Bericht via contactformulier" />
+  <input type="text" name="_gotcha" style="display: none;" />
  
   <input class="btn btn--primary" type="submit" value="{{ submit }}">
 </form>

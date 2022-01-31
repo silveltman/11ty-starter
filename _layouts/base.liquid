@@ -27,6 +27,7 @@
     
     <title>{{ seo.seo_title | default: info.seo.title }}</title>
     <meta name="description" content="{{ seo.seo_description | default: info.seo.description }}" />
+    
     {% metagen info.meta %}
     
   </head>
@@ -37,6 +38,7 @@
 
     {{ content }}
 
+    {% bookshop_live site/assets/bookshop-live.js %}
   </body>
 </html>
 
