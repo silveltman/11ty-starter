@@ -1,10 +1,12 @@
+@use '../abstracts' as *;
+
 /* Should be set according to icon library */
 /* Material icons */
-$icon-size-300: 18px;
-$icon-size-400: 24px;
-$icon-size-500: 36px;
-$icon-size-600: 48px;
-$icon-size-700: 64px;
+// $icon-size-300: 18px;
+// $icon-size-400: 24px;
+// $icon-size-500: 36px;
+// $icon-size-600: 48px;
+// $icon-size-700: 64px;
 
 .icon {
   display: inline-flex;

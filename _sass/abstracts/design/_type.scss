@@ -1,0 +1,80 @@
+@use '../sass/mixins' as *;
+
+/* Families */
+$font-family-primary: sans-serif;
+$font-family-secondary: serif;
+$font-family-tertiary: monospace;
+
+/* Styling */
+$font-lineheight-base: 1.6;
+$font-lineheight-heading: 1.1;
+
+$font-weight-base: 400;
+$font-weight-heading: 700;
+
+/* Should be set according to icon library */
+/* Material icons */
+$icon-size-300: 18px;
+$icon-size-400: 24px;
+$icon-size-500: 36px;
+$icon-size-600: 48px;
+$icon-size-700: 64px;
+
+:root {
+  /* Sizes */
+  --font-size-base: 1em;
+  --font-size-multiplier: 1.2;
+
+  --font-size-200: calc(
+    var(--font-size-base) / var(--font-size-multiplier)
+      var(--font-size-multiplier)
+  );
+  --font-size-300: calc(var(--font-size-base) / var(--font-size-multiplier));
+  --font-size-400: var(--font-size-base);
+  --font-size-500: calc(var(--font-size-base) * var(--font-size-multiplier));
+  --font-size-600: calc(
+    var(--font-size-base) * var(--font-size-multiplier) *
+      var(--font-size-multiplier)
+  );
+  --font-size-700: calc(
+    var(--font-size-base) * var(--font-size-multiplier) *
+      var(--font-size-multiplier) * var(--font-size-multiplier)
+  );
+
+  /* Spacing */
+  --font-space-base: 0.75em;
+  --font-space-steps: 0.25em;
+
+  --font-space-200: calc(
+    var(--font-space-base) - var(--font-space-steps) - var(--font-space-steps)
+  );
+  --font-space-300: calc(var(--font-space-base) - var(--font-space-steps));
+  --font-space-400: var(--font-space-base);
+  --font-space-500: calc(var(--font-space-base) + var(--font-space-steps));
+  --font-space-600: calc(
+    var(--font-space-base) + var(--font-space-steps) + var(--font-space-steps)
+  );
+  --font-space-700: calc(
+    var(--font-space-base) + var(--font-space-steps) + var(--font-space-steps) +
+      var(--font-space-steps)
+  );
+
+  /* Breakpoints */
+  @include media(2) {
+    // 17px
+    --font-size-base: 1.0625em;
+  }
+
+  @include media(3) {
+    // 18px
+    --font-size-base: 1.125em;
+  }
+
+  /* Sizes */
+  --btn-font-size-base: var(--font-size-base);
+
+  --btn-font-size-300: calc(var(--btn-font-size-base) - 0.2em);
+  --btn-font-size-400: calc(var(--btn-font-size-base));
+  --btn-font-size-500: calc(var(--btn-font-size-base) + 0.2em);
+  --btn-font-size-600: calc(var(--btn-font-size-base) + 0.4em);
+}

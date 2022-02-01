@@ -4,11 +4,15 @@
   "description": "A starter template for 11ty",
   "main": "index.js",
   "scripts": {
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "watch:sass": "npx sass _sass:_site/assets/css --watch",
+    "watch:bookshop-sass": "bookshop-sass -b component-library -o _sass/_bookshop.scss -w",
     "dev": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
     "bookshop": "bookshop-browser -b ./component-library -p 6061",
     "bookshop-init": "npx @bookshop/init --component",
-    "bookshop-live": "npx bookshop-live -b ./component-library -o site/assets/bookshop-live.js"
+    "bookshop-live": "npx bookshop-live -b ./component-library -o site/assets/bookshop-live.js",
+    "start": "npm-run-all --parallel watch:bookshop-sass watch:sass watch:eleventy"
   },
   "license": "ISC",
   "devDependencies": {
@@ -16,14 +20,16 @@
     "@11ty/eleventy-img": "^1.0.0",
     "@bookshop/browser": "^2.2.3",
     "@bookshop/eleventy-engine": "^2.2.3",
-    "@bookshop/live": "^2.4.0"
+    "@bookshop/live": "^2.4.0",
+    "@bookshop/sass": "^2.4.0"
   },
   "dependencies": {
     "@bookshop/cloudcannon-eleventy-bookshop": "^2.4.0",
     "@bookshop/eleventy-bookshop": "^2.2.3",
     "@quasibit/eleventy-plugin-sitemap": "^2.1.4",
     "eleventy-plugin-metagen": "^1.5.2",
-    "eleventy-plugin-sass": "^1.2.0",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.49.4"
   }
 }

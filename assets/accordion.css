@@ -1,1 +1,0 @@
-.accordion{display:flex;flex-direction:column}.accordion__item{display:flex;flex-direction:column}.accordion__item+.accordion__item{margin-top:var(--space-400)}.accordion__btn{display:flex;align-items:center;cursor:pointer}.accordion__h{margin:0 auto 0 0}.accordion__p{margin:0}

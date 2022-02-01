@@ -42,7 +42,7 @@ $nav-breakpoint: 2;
     @include media($nav-breakpoint) {
       flex-direction: row;
       align-items: center;
-      padding: 0 $wrapper-padding;
+      padding: 0 var(--wrapper-padding);
     }
   }
 
@@ -53,7 +53,7 @@ $nav-breakpoint: 2;
     height: var(--nav-height);
 
     border-bottom: $border-base;
-    padding: 0 $wrapper-padding;
+    padding: 0 var(--wrapper-padding);
 
     @include media($nav-breakpoint) {
       border: 0;
@@ -134,7 +134,7 @@ $nav-breakpoint: 2;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: var(--space-400) $wrapper-padding;
+    padding: var(--space-400) var(--wrapper-padding);
 
     @include media($nav-breakpoint) {
       padding: var(--space-200) var(--space-300);
@@ -164,7 +164,7 @@ $nav-breakpoint: 2;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: var(--space-400) $wrapper-padding;
+    padding: var(--space-400) var(--wrapper-padding);
     padding-left: var(--space-500);
 
     @include media($nav-breakpoint) {
@@ -182,7 +182,7 @@ $nav-breakpoint: 2;
   margin-top: auto;
   justify-content: stretch;
   grid-gap: var(--space-300) var(--space-200);
-  padding: var(--space-300) $wrapper-padding;
+  padding: var(--space-300) var(--wrapper-padding);
 
   @include media($nav-breakpoint) {
     align-items: center;
