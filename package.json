@@ -15,7 +15,7 @@
     "build:eleventy": "npx @11ty/eleventy",
     "build": "npm-run-all --parallel build:bookshop-sass build:sass build:eleventy",
 
-    "bookshop-live": "npx bookshop-live -b ./component-library -o site/assets/bookshop-live.js",
+    "bookshop-live": "npx bookshop-live -b ./component-library -o assets/js/bookshop-live.js",
     "bookshop-init": "npx @bookshop/init --component"
   },
   "license": "ISC",
