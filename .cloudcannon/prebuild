@@ -1,3 +1,4 @@
+npm install
 npm run build:bookshop-sass
 npm run build:sass
 npm run bookshop-live
