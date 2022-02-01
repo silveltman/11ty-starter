@@ -3827,9 +3827,7 @@
       <p x-show="expanded" class="accordion__p" x-collapse.duration.200>{{ item.description }}</p>\r
     </div>\r
   {% endfor %}\r
-</div>\r
-\r
-`;
+</div>`;
 
   // bookshop-import-file:components/accordion/accordion.eleventy.liquid__bookshop_file__
   var accordion_eleventy_default2 = accordion_eleventy_default;
