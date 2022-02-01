@@ -26,7 +26,7 @@
   @keydown.left="prev"
   @keydown.right="next"
 >
-  <button @click="prev" class="carousel__btn carousel__btn--prev "> ❮ </button>
+  <button @click="prev" class="carousel__btn carousel__btn--prev btn btn--tertiary"> ❮ </button>
 
   <ul x-ref="slider" class="carousel__list" tabindex="0">
 
@@ -38,5 +38,5 @@
     {% endfor %}
   </ul>
 
-  <button @click="next" class="carousel__btn carousel__btn--next"> ❯ </button>
+  <button @click="next" class="carousel__btn carousel__btn--next btn btn--tertiary"> ❯ </button>
 </div>

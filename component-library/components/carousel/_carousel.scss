@@ -78,16 +78,10 @@ $carousel-scollbar-transition: 0.2s ease;
     display: none;
 
     @include media(2) {
-      display: inline-block;
+      display: inline-flex;
       position: absolute;
       z-index: 1;
       cursor: pointer;
-      opacity: 0.3;
-      transition: opacity 100ms ease-out;
-    }
-
-    &:hover {
-      opacity: 1;
     }
 
     &--prev {

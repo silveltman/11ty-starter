@@ -1,6 +1,5 @@
 const pluginBookshop = require("@bookshop/eleventy-bookshop");
 const pluginCloudCannonBookshop = require("@bookshop/cloudcannon-eleventy-bookshop");
-// const pluginSass = require("eleventy-plugin-sass");
 const yaml = require("js-yaml");
 const Image = require("@11ty/eleventy-img");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
@@ -77,12 +76,6 @@ module.exports = function(eleventyConfig) {
   ////---------------
   //// PLUGINS
   ////---------------
-
-  // eleventyConfig.addPlugin(pluginSass, {
-  //   input: ['./_sass/**/*.{scss,sass}', '!node_modules/**'],
-  //   outputDir: "assets",
-  //   remap: true
-  // });
 
   eleventyConfig.addPlugin(sitemap, {
     sitemap: {

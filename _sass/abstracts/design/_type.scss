@@ -22,7 +22,7 @@ $icon-size-700: 64px;
 
 :root {
   /* Sizes */
-  --font-size-base: 1em;
+  --font-size-base: 16px;
   --font-size-multiplier: 1.2;
 
   --font-size-200: calc(
@@ -62,12 +62,12 @@ $icon-size-700: 64px;
   /* Breakpoints */
   @include media(2) {
     // 17px
-    --font-size-base: 1.0625em;
+    --font-size-base: 17px;
   }
 
   @include media(3) {
     // 18px
-    --font-size-base: 1.125em;
+    --font-size-base: 18px;
   }
 
   /* Sizes */

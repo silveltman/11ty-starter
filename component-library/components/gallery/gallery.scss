@@ -47,29 +47,29 @@
 
   &__btn {
     position: absolute;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+    // display: flex;
+    // align-items: center;
+    // cursor: pointer;
 
     bottom: var(--space-200);
     left: var(--space-200);
-    padding: var(--space-100) var(--space-200);
-    border: $border-base;
-    border-radius: $radius-small;
-    box-shadow: $shadow-base;
-    background: $color-bg-dark;
-    color: $color-text-base;
+    // padding: var(--space-100) var(--space-200);
+    // border: $border-base;
+    // border-radius: $radius-small;
+    // box-shadow: $shadow-base;
+    // background: $color-bg-dark;
+    // color: $color-text-base;
 
-    opacity: 0.5;
-    transition: opacity 100ms ease;
+    // opacity: 0.5;
+    // transition: opacity 100ms ease;
 
     @include media(2) {
       left: calc(var(--space-200) + var(--wrapper-padding));
     }
 
-    &:hover {
-      opacity: 1;
-    }
+    // &:hover {
+    //   opacity: 1;
+    // }
 
     i {
       margin-right: var(--space-100);
