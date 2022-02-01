@@ -4,15 +4,19 @@
   "description": "A starter template for 11ty",
   "main": "index.js",
   "scripts": {
-    "watch:eleventy": "npx @11ty/eleventy --serve",
-    "watch:sass": "npx sass _sass:_site/assets/css --watch",
     "watch:bookshop-sass": "bookshop-sass -b component-library -o _sass/_bookshop.scss -w",
-    "dev": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy",
-    "bookshop": "bookshop-browser -b ./component-library -p 6061",
-    "bookshop-init": "npx @bookshop/init --component",
+    "watch:sass": "npx sass _sass:_site/assets/css --watch",
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "bookshop-browser": "bookshop-browser -b ./component-library -p 6061",
+    "dev": "npm-run-all --parallel watch:bookshop-sass watch:sass watch:eleventy bookshop-browser",
+
+    "build:bookshop-sass": "bookshop-sass -b component-library -o _sass/_bookshop.scss",
+    "build:sass": "npx sass _sass:_site/assets/css",
+    "build:eleventy": "npx @11ty/eleventy",
+    "build": "npm-run-all --parallel build:bookshop-sass build:sass build:eleventy",
+
     "bookshop-live": "npx bookshop-live -b ./component-library -o site/assets/bookshop-live.js",
-    "start": "npm-run-all --parallel watch:bookshop-sass watch:sass watch:eleventy"
+    "bookshop-init": "npx @bookshop/init --component"
   },
   "license": "ISC",
   "devDependencies": {
