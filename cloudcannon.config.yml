@@ -1,5 +1,5 @@
-# Image upload directory
-uploads_dir: /assets/img/uploads
+paths:
+  uploads: assets/img/uploads
 
 collection_groups:
   - heading: "Pagina's"
@@ -40,3 +40,4 @@ _inputs:
     label: Omschrijving
     comment: Omschrijf je afbeelding in maximaal 125 karakters
     type: textarea
+# TODO: add html input type and maybe bg(-color)?

@@ -4,6 +4,7 @@ const yaml = require("js-yaml");
 const Image = require("@11ty/eleventy-img");
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const metagen = require('eleventy-plugin-metagen');
+const inspect = require("util").inspect;
 
 ////---------------
 //// FUNCTIONS
@@ -11,12 +12,12 @@ const metagen = require('eleventy-plugin-metagen');
 
 // For eleventy-img plugin via: {% image "[path]", "[class]", "[alt]", "[sizes]", "[widths]" %
 // Usage exaple: {% image "./assets/img/myImg.jpg", "myClass", "A description", "(max-width: 768px) 90vw, 300px", "300, 600, 900" %}
-async function imageShortcode(src, className, alt, sizes, widths) {
+async function imageShortcode(src, alt, className, sizes, widths) {
   let widthsArray = widths.split(',').map(Number);
   let metadata = await Image(`.${src}`, {
     widths: widthsArray,
     formats: ["webp", "jpeg", "svg"],
-    url_path: ".",
+    urlPath: "/assets/img/generated",
     outputDir: "./_site/assets/img/generated",
     svgShortCircuit: true,
   });
@@ -105,6 +106,8 @@ module.exports = function(eleventyConfig) {
 
   return {
     dir: {
+      input: "views",
+      // ⚠️ Values below are relative to the input directory.
       includes: '_includes',
       layouts: '_layouts',
       data: '_data',
