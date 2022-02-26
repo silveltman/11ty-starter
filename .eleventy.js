@@ -20,17 +20,22 @@ const imageShortcode = async (
   widths = '400, 800, 1280', 
   ) => {
 
+  // Turn a string of numbers into an array
   const widthsArray = widths.split(',').map(Number);
+
+  // If local add a '.' to path, if remote pass full url
   const fullSrc = relativeSrc.startsWith('/') ? `.${relativeSrc}` : relativeSrc;
 
+  // coonfig for generating
   const imageMetaData = await Image(fullSrc, {
-    widths: widthsArray,
+    widths: [null, ...widthsArray],
     formats: ['webp', 'jpeg', 'svg'],
     urlPath: "/assets/img/generated",
     outputDir: "./_site/assets/img/generated",
     svgShortCircuit: true
   })
 
+  //attributes for generateHTML
   let imageAttributes = {
     class: className,
     alt,
@@ -39,7 +44,7 @@ const imageShortcode = async (
     decoding: "async",
   };
 
-  // Throw an error when alt is missing (alt="" works okay)
+  // Throws an error when alt is missing (alt="" works okay)
   return Image.generateHTML(imageMetaData, imageAttributes);
 }
 
