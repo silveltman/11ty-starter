@@ -28,7 +28,7 @@ const imageShortcode = async (
 
   // coonfig for generating
   const imageMetaData = await Image(fullSrc, {
-    widths: [null, ...widthsArray],
+    widths: widthsArray,
     formats: ['webp', 'jpeg', 'svg'],
     urlPath: "/assets/img/generated",
     outputDir: "./_site/assets/img/generated",
