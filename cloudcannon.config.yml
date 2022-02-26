@@ -14,7 +14,7 @@ collection_groups:
 
 collections_config:
   examples:
-    _icon: landscape
+    icon: landscape
     output: true
     _enabled_editors:
       - visual
@@ -40,4 +40,3 @@ _inputs:
     label: Omschrijving
     comment: Omschrijf je afbeelding in maximaal 125 karakters
     type: textarea
-# TODO: add html input type and maybe bg(-color)?

@@ -12,15 +12,24 @@ const inspect = require("util").inspect;
 
 // For eleventy-img plugin via: {% image "[path]", "[class]", "[alt]", "[sizes]", "[widths]" %
 // Usage exaple: {% image "./assets/img/myImg.jpg", "myClass", "A description", "(max-width: 768px) 90vw, 300px", "300, 600, 900" %}
-async function imageShortcode(src, alt, className, sizes, widths) {
-  let widthsArray = widths.split(',').map(Number);
-  let metadata = await Image(`.${src}`, {
+const imageShortcode = async (
+  relativeSrc, 
+  alt, 
+  className, 
+  sizes = '100vw',
+  widths = '400, 800, 1280', 
+  ) => {
+
+  const widthsArray = widths.split(',').map(Number);
+  const fullSrc = relativeSrc.startsWith('/') ? `.${relativeSrc}` : relativeSrc;
+
+  const imageMetaData = await Image(fullSrc, {
     widths: widthsArray,
-    formats: ["webp", "jpeg", "svg"],
+    formats: ['webp', 'jpeg', 'svg'],
     urlPath: "/assets/img/generated",
     outputDir: "./_site/assets/img/generated",
-    svgShortCircuit: true,
-  });
+    svgShortCircuit: true
+  })
 
   let imageAttributes = {
     class: className,
@@ -31,7 +40,7 @@ async function imageShortcode(src, alt, className, sizes, widths) {
   };
 
   // Throw an error when alt is missing (alt="" works okay)
-  return Image.generateHTML(metadata, imageAttributes);
+  return Image.generateHTML(imageMetaData, imageAttributes);
 }
 
 
